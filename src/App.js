@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <h1>Hello App</h1>  
+      <h1>Hello App Welcome</h1>  
       <h2>{x}</h2> 
       <button onClick={()=> setX(x + 1)}>Inc</button> 
        
