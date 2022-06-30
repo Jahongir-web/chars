@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Charts from './chartsLib/Charts';
+
+import Header from "./components/Header";
 
 function App() {
+
+  const [x, setX] = useState(0)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <h1>Hello App</h1>  
+      <h2>{x}</h2> 
+      <button onClick={()=> setX(x + 1)}>Inc</button> 
+       
+      <Charts />
+      
     </div>
   );
 }
